@@ -77,15 +77,12 @@ ProductCatalogApi
 ## ▶️ Запуск проекта
 
 ### 1. Клонирование
-```bash
 git clone https://github.com/ritokral2008-spec/product-catalog-api.git
 
 ### 2. Перейти в папку
-```bash
 cd ProductCatalogApi
 
 ### 3. Запуск
-```bash
 dotnet run --project ProductCatalogApi.Api
 
 ---
