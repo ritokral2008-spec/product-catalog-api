@@ -1,0 +1,66 @@
+
+---
+
+# 🚫 .gitignore (ASP.NET Core + VS + EF Core + SQLite)
+
+```gitignore
+## Visual Studio
+.vs/
+bin/
+obj/
+
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Build outputs
+bin/
+obj/
+out/
+
+## .NET
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+
+## EF Core
+Migrations/*Designer.cs
+Migrations/*ModelSnapshot.cs
+
+## SQLite database
+*.db
+*.db-shm
+*.db-wal
+
+## User secrets
+secrets.json
+
+## ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+## Logs
+Logs/
+*.log
+
+## Node (if ever used for frontend)
+node_modules/
+
+## OS
+.DS_Store
+Thumbs.db
+
+## Rider / JetBrains
+.idea/
+
+## VS Code
+.vscode/
+
+## Publish output
+publish/
+
+## Docker
+docker-compose.override.yml

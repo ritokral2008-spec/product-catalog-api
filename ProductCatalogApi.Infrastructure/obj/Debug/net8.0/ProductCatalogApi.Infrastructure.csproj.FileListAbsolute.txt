@@ -1,0 +1,17 @@
+C:\Users\ritok\source\repos\ProductCalatogApi\ProductCatalogApi.Infrastructure\obj\Debug\net8.0\ProductCatalogApi.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\ritok\source\repos\ProductCalatogApi\ProductCatalogApi.Infrastructure\obj\Debug\net8.0\ProductCatalogApi.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ritok\source\repos\ProductCalatogApi\ProductCatalogApi.Infrastructure\obj\Debug\net8.0\ProductCatalogApi.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\ritok\source\repos\ProductCalatogApi\ProductCatalogApi.Infrastructure\obj\Debug\net8.0\ProductCatalogApi.Infrastructure.AssemblyInfo.cs
+C:\Users\ritok\source\repos\ProductCalatogApi\ProductCatalogApi.Infrastructure\obj\Debug\net8.0\ProductCatalogApi.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\ritok\source\repos\ProductCalatogApi\ProductCatalogApi.Infrastructure\bin\Debug\net8.0\ProductCatalogApi.Infrastructure.deps.json
+C:\Users\ritok\source\repos\ProductCalatogApi\ProductCatalogApi.Infrastructure\bin\Debug\net8.0\ProductCatalogApi.Infrastructure.dll
+C:\Users\ritok\source\repos\ProductCalatogApi\ProductCatalogApi.Infrastructure\bin\Debug\net8.0\ProductCatalogApi.Infrastructure.pdb
+C:\Users\ritok\source\repos\ProductCalatogApi\ProductCatalogApi.Infrastructure\bin\Debug\net8.0\ProductCatalogApi.Domain.dll
+C:\Users\ritok\source\repos\ProductCalatogApi\ProductCatalogApi.Infrastructure\bin\Debug\net8.0\ProductCatalogApi.Domain.pdb
+C:\Users\ritok\source\repos\ProductCalatogApi\ProductCatalogApi.Infrastructure\obj\Debug\net8.0\ProductC.A201F44C.Up2Date
+C:\Users\ritok\source\repos\ProductCalatogApi\ProductCatalogApi.Infrastructure\obj\Debug\net8.0\ProductCatalogApi.Infrastructure.dll
+C:\Users\ritok\source\repos\ProductCalatogApi\ProductCatalogApi.Infrastructure\obj\Debug\net8.0\refint\ProductCatalogApi.Infrastructure.dll
+C:\Users\ritok\source\repos\ProductCalatogApi\ProductCatalogApi.Infrastructure\obj\Debug\net8.0\ProductCatalogApi.Infrastructure.pdb
+C:\Users\ritok\source\repos\ProductCalatogApi\ProductCatalogApi.Infrastructure\obj\Debug\net8.0\ref\ProductCatalogApi.Infrastructure.dll
+C:\Users\ritok\source\repos\ProductCalatogApi\ProductCatalogApi.Infrastructure\bin\Debug\net8.0\ProductCatalogApi.Infrastructure.runtimeconfig.json
+C:\Users\ritok\source\repos\ProductCalatogApi\ProductCatalogApi.Infrastructure\obj\Debug\net8.0\ProductCatalogApi.Infrastructure.genruntimeconfig.cache
