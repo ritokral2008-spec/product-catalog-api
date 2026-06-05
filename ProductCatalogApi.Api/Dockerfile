@@ -1,20 +1,21 @@
-﻿FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-WORKDIR /app
-EXPOSE 8080
-
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
 COPY . .
 
-RUN dotnet restore
-RUN dotnet publish -c Release -o /app/publish
+RUN dotnet restore ProductCatalogApi.Api/ProductCatalogApi.Api.csproj
 
-FROM base AS final
+RUN dotnet publish ProductCatalogApi.Api/ProductCatalogApi.Api.csproj \
+    -c Release \
+    -o /app/publish
+
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
 
 COPY --from=build /app/publish .
 
-ENV ASPNETCORE_URLS=http://+:8080
+ENV ASPNETCORE_URLS=http://0.0.0.0:8080
 
-ENTRYPOINT ["dotnet", "ProductCatalogApi.dll"]
+EXPOSE 8080
+
+ENTRYPOINT ["dotnet", "ProductCatalogApi.Api.dll"]
