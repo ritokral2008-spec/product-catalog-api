@@ -87,12 +87,10 @@ app.UseSwaggerUI();
 using(var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    DataSeeder.Seed(db);
-}
-using(var scope = app.Services.CreateScope())
-{
-    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+
     db.Database.Migrate();
+
+    DataSeeder.Seed(db);
 }
 
 //app.UseHttpsRedirection();
