@@ -77,29 +77,13 @@ ProductCatalogApi
 ## ▶️ Запуск проекта
 
 ### 1. Клонирование
-<<<<<<< HEAD
-<<<<<<< HEAD
 git clone https://github.com/ritokral2008-spec/product-catalog-api.git
 
 ### 2. Перейти в папку
 cd ProductCatalogApi
 
 ### 3. Запуск
-=======
-```bash
-=======
->>>>>>> 5115d82 (Update README.md)
-git clone https://github.com/ritokral2008-spec/product-catalog-api.git
-
-### 2. Перейти в папку
 cd ProductCatalogApi
-
-### 3. Запуск
-<<<<<<< HEAD
-```bash
->>>>>>> 8854772 (Create README.md)
-=======
->>>>>>> 5115d82 (Update README.md)
 dotnet run --project ProductCatalogApi.Api
 
 ---
