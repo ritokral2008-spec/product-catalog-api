@@ -24,6 +24,9 @@ public class AuthController: ControllerBase
     {
         var token = await _auth.Login(request.Username, request.Password);
 
+        Console.WriteLine(request.Username);
+        Console.WriteLine(request.Password);
+
         if(token == null)
             return Unauthorized();
 

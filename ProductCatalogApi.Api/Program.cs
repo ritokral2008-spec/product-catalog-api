@@ -10,7 +10,12 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 var jwtSettings = builder.Configuration.GetSection("Jwt");
-var key = Encoding.UTF8.GetBytes(jwtSettings["Key"]);
+var keyString = jwtSettings["Key"];
+
+if(string.IsNullOrEmpty(keyString))
+    throw new Exception("JWT Key is missing");
+
+var key = Encoding.UTF8.GetBytes(keyString);
 
 builder.Services
     .AddAuthentication(options =>
@@ -36,8 +41,6 @@ builder.Services
 builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
-
-builder.Services.AddSwaggerGen();
 
 builder.Services.AddSwaggerGen(c =>
 {
@@ -79,6 +82,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
         builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
+
+app.UseDeveloperExceptionPage();
 
 app.UseSwagger();
 

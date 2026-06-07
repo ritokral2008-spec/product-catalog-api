@@ -17,13 +17,7 @@ public class JwtService
     public string GenerateToken(string username,string role)
     {
         var jwtSettings = _config.GetSection("Jwt");
-
-        var keyString = jwtSettings["Key"];
-
-        if(string.IsNullOrEmpty(keyString))
-            throw new Exception("JWT Key is missing");
-
-        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(keyString));
+        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings["Key"]));
 
         var claims = new[]
         {

@@ -42,18 +42,29 @@ public class AuthService
 
     public async Task<string?> Login(string username, string password)
     {
-        var user = await _db.Users
-            .Include(x => x.Role)
-            .FirstOrDefaultAsync(x => x.Username == username);
+        try
+        {
+            var user = await _db.Users
+                .Include(x => x.Role)
+                .FirstOrDefaultAsync(x => x.Username == username);
 
-        if(user == null)
-            return null;
+            if(user == null)
+                return null;
 
-        var isValid = BCrypt.Net.BCrypt.Verify(password, user.PasswordHash);
+            var isValid = BCrypt.Net.BCrypt.Verify(password, user.PasswordHash);
 
-        if(!isValid)
-            return null;
+            if(!isValid)
+                return null;
 
-        return _jwt.GenerateToken(user.Username, user.Role.Name);
+            if(user.Role == null)
+                throw new Exception("ROLE IS NULL");
+
+            return _jwt.GenerateToken(user.Username, user.Role.Name);
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine(ex.ToString());
+            throw;
+        }
     }
 }
