@@ -43,7 +43,6 @@ public class ProductsController: ControllerBase
     }
 
     [HttpPost]
-    [Authorize(Roles = "Admin")] // только админ
     public async Task<ActionResult<ProductDto>> CreateProduct(CreateProductDto dto)
     {
         var createdProduct = await _productService.CreateAsync(dto);

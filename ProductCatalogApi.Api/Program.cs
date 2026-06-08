@@ -38,6 +38,8 @@ builder.Services
         };
     });
 
+builder.Services.AddAuthorization();
+
 builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
