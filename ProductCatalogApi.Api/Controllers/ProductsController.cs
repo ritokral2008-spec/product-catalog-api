@@ -57,7 +57,7 @@ public class ProductsController: ControllerBase
     {
         var updated = await _productService.UpdateAsync(id, dto);
 
-        if(!updated)
+        if(updated == null)
             return NotFound();
 
         return NoContent();

@@ -27,12 +27,12 @@ public class ProductService: IProductService
             .ToListAsync();
     }
 
-    public async Task<bool> UpdateAsync(int id, UpdateProductDto dto)
+    public async Task<ProductDto?> UpdateAsync(int id, UpdateProductDto dto)
     {
         var product = await _context.Products.FindAsync(id);
 
         if(product == null)
-            return false;
+            return null;
 
         product.Name = dto.Name;
         product.Price = dto.Price;
@@ -40,7 +40,13 @@ public class ProductService: IProductService
 
         await _context.SaveChangesAsync();
 
-        return true;
+        return new ProductDto
+        {
+            Id = product.Id,
+            Name = product.Name,
+            Price = product.Price,
+            CategoryName = product.Category?.Name ?? ""
+        };
     }
 
     public async Task<ProductDto?> GetByIdAsync(int id)
@@ -54,7 +60,8 @@ public class ProductService: IProductService
         {
             Id = product.Id,
             Name = product.Name,
-            Price = product.Price
+            Price = product.Price,
+            CategoryName = product.Category?.Name ?? ""
         };
      }
 
