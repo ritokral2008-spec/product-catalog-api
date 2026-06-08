@@ -71,11 +71,16 @@ public class ProductService: IProductService
 
         await _context.SaveChangesAsync();
 
+        await _context.Entry(product)
+            .Reference(p => p.Category)
+            .LoadAsync();
+
         return new ProductDto
         {
             Id = product.Id,
             Name = product.Name,
-            Price = product.Price
+            Price = product.Price,
+            CategoryName = product.Category?.Name ?? ""
         };
     }
 
