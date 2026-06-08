@@ -23,6 +23,8 @@ public static class DataSeeder
                 PasswordHash = BCrypt.Net.BCrypt.HashPassword("123456"),
                 RoleId = adminRole.Id
             });
+
+            db.SaveChanges();
         }
     }
 }
